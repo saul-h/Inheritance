@@ -1,3 +1,8 @@
+/*
+ * Abel Acosta
+ * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
+ */
+
 public class Candy extends DessertItem{
 	@Override
 	public double getCost() {
