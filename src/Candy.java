@@ -1,4 +1,7 @@
 public class Candy extends DessertItem{
-
-
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

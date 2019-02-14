@@ -1,5 +1,7 @@
 public class IceCream extends DessertItem {
-   public IceCream() {
-      
-   }
+	@Override
+	public double getCost() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
