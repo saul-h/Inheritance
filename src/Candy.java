@@ -4,9 +4,14 @@
  */
 
 public class Candy extends DessertItem{
+	
+	// Weight of the candy (lbs)
+	private double weight;
+	// Price per pound
+	private double pricePerPound;
+	
 	@Override
 	public double getCost() {
-		// TODO Auto-generated method stub
-		return 0;
+		return weight * pricePerPound;
 	}
 }
