@@ -9,6 +9,23 @@ public class Candy extends DessertItem{
 	private double weight;
 	// Price per pound
 	private double pricePerPound;
+   
+/**
+  * Default Candy constructor
+  */
+   public Candy() {
+      weight = 0;
+      pricePerPound = 0.0;
+   }
+   
+/**
+  * Initialize Candy data
+  */
+   public Candy(String name, double weight, double pricePerPound) {
+      super.name = name;
+      this.weight = weight;
+      this.pricePerPound = pricePerPound;
+   }
 	
 	@Override
 	public double getCost() {

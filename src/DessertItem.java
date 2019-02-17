@@ -18,7 +18,7 @@ public abstract class DessertItem {
  */
   public DessertItem(String name) {
       this.name = name;
-      }
+  }
 /**
  * Returns name of DessertItem
  * @return name of DessertItem
