@@ -21,7 +21,10 @@ public class Checkout {
 	
 	// Clears cash register
 	public void clear() {
-		//TODO: Clear cash register
+		int size = items.size();
+		for(int i = 0; i < size; i++) {
+			items.remove(0);
+		}
 	}
 	
 	// Returns number of items
@@ -31,14 +34,16 @@ public class Checkout {
 	
 	// Get sub total (before tax)
 	public double totalCost() {
-		//TODO: Return sub total of items
-		return 0;
+		int total = 0;
+		for(DessertItem item: items) {
+			total += item.getCost();
+		}
+		return total;
 	}
 	
 	// Returns tax rate for this purchase
 	public double getTaxRate() {
-		//TODO: Return tax - Note: The tax should be rounded to the nearest cent
-		return 0;
+		return tax;
 	}
 	
 	public void setTaxRate(double t) {
