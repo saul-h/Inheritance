@@ -35,7 +35,7 @@ public class Checkout {
 	
 	// Get sub total (before tax)
 	public double totalCost() {
-		int total = 0;
+		double total = 0.0f;
 		for(DessertItem item: items) {
 			total += item.getCost();
 		}
@@ -58,15 +58,19 @@ public class Checkout {
 	
 	//  Returns a String representing a receipt for the current list of items
 	public String toString() {
-		String title = "A & S Dessert Shoppe\n"+"--------------------\n\n";
+		String info = 	"Number of items: " + items.size() + "\n" +
+						"Total Cost: " + totalCost() + "\n" +
+						"Total Tax: " + (double)totalTax()/100 + "\n" + 
+						"Cost + Tax: " + (totalCost() + (totalTax() / 100)) + "\n\n";
+		String title = "A & S Dessert Shoppe\n"+"--------------------\n";
 		String body = "";
 		for(DessertItem item: items) {
 			body += String.format("%-25s%9.2f%n",item, item.getCost());
 		}
 		body += "\n";
 		String footer = String.format("%-25s%9.2f%n","Tax", totalTax() / 100.0f);
-		footer += String.format("%-25s%9.2f","Total Cost", totalCost() + totalTax()/100.0f);
-		return title+body+footer;
+		footer += String.format("%-25s%9.2f","Total Cost", totalCost() + totalTax()/100);
+		return info+title+body+footer;
 	}
 
 }
