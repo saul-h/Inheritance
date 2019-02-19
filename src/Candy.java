@@ -19,8 +19,6 @@ public class Candy extends DessertItem{
 
 	// Price per pound (in cents)
 	private int pricePerPound;
-	// Calories of candy
-	private int calories;
 	
 	// Constructor
 	public Candy() {
@@ -55,11 +53,5 @@ public class Candy extends DessertItem{
 	// Return calories
 	public int getCalories() {
 		return this.calories;
-	}
-
-	@Override
-	public int compareTo(DessertItem o) {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 }
