@@ -20,6 +20,23 @@ public class Main {
 		items.add(iceCream);
 		items.add(sundae);
 		
+		// TODO: Print item information
+		/* Example:
+		 	COOKIE TEST:
+			0 @ 0.0 /dz.
+			                             0.00
+			
+			17 @ 4.99 /dz.
+			ChocChip(Cookie)             7.07
+			
+			ChocChip(Cookie) calories:250
+			
+			15 @ 3.99 /dz.
+			Oatmeal(Cookie)              4.99
+			
+			Oatmeal(Cookie) calories:240
+		 */
+		
 		// Create checkout object
 		Checkout checkout = new Checkout();
 		checkout.setTaxRate(0.09);
@@ -31,6 +48,11 @@ public class Main {
 		
 		// Print receipt
 		System.out.println(checkout);
+		
+		// TODO: Max Test With Same DessertItem
+		// TODO: Max Test With Different DessertItem Types
+		// TODO: The unsorted DessertList
+		// TODO: The sorted DessertList
 	}
 
 }
