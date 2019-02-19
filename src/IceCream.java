@@ -45,4 +45,10 @@ public class IceCream extends DessertItem {
 	public int getCalories() {
 		return this.calories;
 	}
+
+	@Override
+	public int compareTo(DessertItem arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

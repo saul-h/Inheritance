@@ -55,4 +55,10 @@ public class Cookie extends DessertItem {
 	public int getCalories() {
 		return this.calories;
 	}
+
+	@Override
+	public int compareTo(DessertItem o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
