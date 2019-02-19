@@ -6,7 +6,7 @@
 public class IceCream extends DessertItem {
 	
 	// Cost of ice cream (in cents)
-	private int cost;
+	protected int cost;
 	// Calories of ice cream
 	private int calories;
 	
@@ -15,11 +15,16 @@ public class IceCream extends DessertItem {
 		name = "Ice Cream";
 	}
 	
+	public IceCream(int cost) {
+		name = "Ice Cream";
+		this.cost = cost;
+	}
+	
 	// Return cost of ice cream
 	@Override
 	public double getCost() {
 		// Multiply by 100 to convert into dollars
-		double c = cost * 100.0f;
+		double c = cost / 100.0f;
 		// Round to nearest cent
 		c = Math.round(c*100.0f);
 		return c / 100.0f;

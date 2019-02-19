@@ -10,8 +10,8 @@ public class Candy extends DessertItem{
 /**
   * Initialize Candy data
   */
-   public Candy(String name, double weight, double pricePerPound) {
-      super.name = name;
+   public Candy(double weight, int pricePerPound) {
+      super.name = "Candy";
       this.weight = weight;
       this.pricePerPound = pricePerPound;
    }
@@ -24,15 +24,15 @@ public class Candy extends DessertItem{
 	// Constructor
 	public Candy() {
 		name = "Candy";
-    weight = 0;
-    pricePerPound = 0.0;
+		weight = 0;
+		pricePerPound = 0;
 	}
 	
 	// Return cost of candy
 	@Override
 	public double getCost() {
 		// Multiply by 100 to convert to dollars
-		double c = weight * pricePerPound * 100.0f;
+		double c = weight * (double)pricePerPound / 100.0f;
 		// Round to nearest cent
 		c = Math.round(c * 100.0f);
 		return c/100.0f;	// Return in dollars
