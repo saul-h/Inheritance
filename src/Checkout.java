@@ -52,8 +52,7 @@ public class Checkout {
 	
 	// Returns total tax on items in cents
 	public int totalTax() {
-		//TODO
-		return 0;
+		return (int)(tax * totalCost() * 100.0f);
 	}
 	
 	//  Returns a String representing a receipt for the current list of items
