@@ -7,17 +7,6 @@ public class Candy extends DessertItem{
 	
 	// Weight of the candy (lbs)
 	private double weight;
-	// Price per pound
-	private double pricePerPound;
-   
-/**
-  * Default Candy constructor
-  */
-   public Candy() {
-      weight = 0;
-      pricePerPound = 0.0;
-   }
-   
 /**
   * Initialize Candy data
   */
@@ -26,9 +15,36 @@ public class Candy extends DessertItem{
       this.weight = weight;
       this.pricePerPound = pricePerPound;
    }
+
+	// Price per pound (in cents)
+	private int pricePerPound;
+	// Calories of candy
+	private int calories;
 	
+	// Constructor
+	public Candy() {
+		name = "Candy";
+    weight = 0;
+    pricePerPound = 0.0;
+	}
+	
+	// Return cost of candy
 	@Override
 	public double getCost() {
-		return weight * pricePerPound;
+		// Multiply by 100 to convert to dollars
+		double c = weight * pricePerPound * 100.0f;
+		// Round to nearest cent
+		c = Math.round(c * 100.0f);
+		return c/100.0f;	// Return in dollars
+	}
+	
+	// Set calorie amount
+	public void setCalories(int c) {
+		this.calories = c;
+	}
+	
+	// Return calories
+	public int getCalories() {
+		return this.calories;
 	}
 }

@@ -11,13 +11,13 @@ public abstract class DessertItem {
  * Null constructor for DessertItem class
  */
   public DessertItem() {
-    this("");
+	  this("");
   }
 /**
  * Initializes DessertItem data
  */
   public DessertItem(String name) {
-      this.name = name;
+	  this.name = name;
   }
 /**
  * Returns name of DessertItem
@@ -31,5 +31,9 @@ public abstract class DessertItem {
  * @return cost of DessertItem
  */
   public abstract double getCost();
+  
+  public String toString() {
+	  return name;
+  }
 
 }
