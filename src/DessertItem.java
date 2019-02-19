@@ -1,11 +1,13 @@
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
 public abstract class DessertItem {
 
   protected String name;
+  protected int calories;
 
 /**
  * Null constructor for DessertItem class
@@ -34,6 +36,10 @@ public abstract class DessertItem {
   
   public String toString() {
 	  return name;
+  }
+  
+  public int getCalories() {
+     return calories;
   }
 
 }

@@ -1,5 +1,6 @@
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -7,8 +8,6 @@ public class IceCream extends DessertItem {
 	
 	// Cost of ice cream (in cents)
 	protected int cost;
-	// Calories of ice cream
-	private int calories;
 	
 	// Constructor
 	public IceCream() {
@@ -19,6 +18,13 @@ public class IceCream extends DessertItem {
 		name = "Ice Cream";
 		this.cost = cost;
 	}
+   
+   public IceCream(String name, int cost, int calories)
+   {
+      super.name = this.name + "(IceCream)";
+      this.cost = cost;
+      super.calories = calories;
+   }
 	
 	// Return cost of ice cream
 	@Override
