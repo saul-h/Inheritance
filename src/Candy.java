@@ -7,6 +7,15 @@ public class Candy extends DessertItem{
 	
 	// Weight of the candy (lbs)
 	private double weight;
+/**
+  * Initialize Candy data
+  */
+   public Candy(String name, double weight, double pricePerPound) {
+      super.name = name;
+      this.weight = weight;
+      this.pricePerPound = pricePerPound;
+   }
+
 	// Price per pound (in cents)
 	private int pricePerPound;
 	// Calories of candy
@@ -15,6 +24,8 @@ public class Candy extends DessertItem{
 	// Constructor
 	public Candy() {
 		name = "Candy";
+    weight = 0;
+    pricePerPound = 0.0;
 	}
 	
 	// Return cost of candy

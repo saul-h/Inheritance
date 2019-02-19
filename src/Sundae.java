@@ -4,7 +4,6 @@
  */
 
 public class Sundae extends IceCream{
-	
 	// Cost of ice cream topping
 	private int costOfTopping;
 	// Calories of sundae
