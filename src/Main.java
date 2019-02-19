@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 /*
  * Abel Acosta
@@ -50,9 +51,21 @@ public class Main {
 		System.out.println(checkout);
 		
 		// TODO: Max Test With Same DessertItem
+		
 		// TODO: Max Test With Different DessertItem Types
-		// TODO: The unsorted DessertList
-		// TODO: The sorted DessertList
+
+		System.out.println("The unsorted DessertList is: ");
+		for(DessertItem item: items) {
+			System.out.println(item + " has " + item.getCalories() + " calories.");
+		}
+		System.out.println("--------------------------------------------");
+		
+		Collections.sort(items);
+		System.out.println("The sorted DessertList is: ");
+		for(DessertItem item: items) {
+			System.out.println(item + " has " + item.getCalories() + " calories.");
+		}
+		System.out.println("--------------------------------------------");
 	}
 
 }
