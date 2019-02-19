@@ -1,5 +1,6 @@
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -19,6 +20,13 @@ public class Sundae extends IceCream{
 		cost = c;
 		this.costOfTopping = t;
 	}
+   
+   public Sundae(String name, int c, int t, int calories) {
+      super.name = name + "(Sundae)";
+      this.cost = c;
+      this.costOfTopping = t;
+      super.calories = calories;
+   }
 	
 	// Return cost of sundae
 	public double getCost() {

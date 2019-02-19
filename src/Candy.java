@@ -1,5 +1,6 @@
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -27,6 +28,14 @@ public class Candy extends DessertItem{
 		weight = 0;
 		pricePerPound = 0;
 	}
+   
+   public Candy(String name, double weight, int pricePerPound, int calories)
+   {
+      super.name = name + "(Candy)";
+      this.weight = weight;
+      this.pricePerPound = pricePerPound;
+      super.calories = calories;
+   }
 	
 	// Return cost of candy
 	@Override

@@ -1,5 +1,6 @@
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -25,6 +26,13 @@ public class Cookie extends DessertItem {
 	      this.quantity = quantity;
 	      this.pricePerDoz = price;
 	}
+   
+   public Cookie(String name, int quantity, int price, int calories) {
+      super.name = name + "(Cookie)";
+      this.quantity = quantity;
+      this.price = price;
+      super.calories = calories;
+   }
 	
 	// Return cost of cookie
 	@Override

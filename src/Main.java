@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 /*
  * Abel Acosta
+ * Saul Hernandez
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
