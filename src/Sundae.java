@@ -17,7 +17,10 @@ public class Sundae extends IceCream{
 	
 	// Return cost of sundae
 	public double getCost() {
-		return super.getCost() + costOfTopping;
+		double c = super.getCost() + costOfTopping * 100;
+		// Round to nearest cent
+		c = Math.round(c * 100.0f);
+		return c/100.0f;
 	}
 	
 	// Set calorie amount

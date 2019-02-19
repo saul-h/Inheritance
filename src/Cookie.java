@@ -7,8 +7,8 @@ public class Cookie extends DessertItem {
 	
 	// Number of cookies
 	private int numberOfCookies;
-	// Price per dozen
-	private double pricePerDoz;
+	// Price per dozen (in cents)
+	private int pricePerDoz;
 	// Calories of cookie
 	private int calories;
 	
@@ -20,7 +20,11 @@ public class Cookie extends DessertItem {
 	// Return cost of cookie
 	@Override
 	public double getCost() {
-		return numberOfCookies/12 * pricePerDoz;
+		// Multiply by 100 to convert to dollars
+		double c = numberOfCookies/12 * pricePerDoz * 100.0f;
+		// Round to nearest cent
+		c = Math.round(c*100.0f);
+		return c/100.0f;	// Return in dollars
 	}
 	
 	// Set calorie amount

@@ -7,8 +7,8 @@ public class Candy extends DessertItem{
 	
 	// Weight of the candy (lbs)
 	private double weight;
-	// Price per pound
-	private double pricePerPound;
+	// Price per pound (in cents)
+	private int pricePerPound;
 	// Calories of candy
 	private int calories;
 	
@@ -20,7 +20,11 @@ public class Candy extends DessertItem{
 	// Return cost of candy
 	@Override
 	public double getCost() {
-		return weight * pricePerPound;
+		// Multiply by 100 to convert to dollars
+		double c = weight * pricePerPound * 100.0f;
+		// Round to nearest cent
+		c = Math.round(c * 100.0f);
+		return c/100.0f;	// Return in dollars
 	}
 	
 	// Set calorie amount
