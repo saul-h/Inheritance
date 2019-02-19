@@ -57,8 +57,15 @@ public class Checkout {
 	
 	//  Returns a String representing a receipt for the current list of items
 	public String toString() {
-		//TODO
-		return null;
+		String title = "M & M Dessert Shoppe\n"+"--------------------\n\n";
+		String body = "";
+		for(DessertItem item: items) {
+			body += String.format("%-20s%9.2f%n",item, item.getCost());
+		}
+		body += "\n";
+		String footer = String.format("%-20s%9.2f%n","Tax", totalTax() / 100.0f);
+		footer += String.format("%-20s%9.2f","Total Cost", totalCost() + totalTax()/100.0f);
+		return title+body+footer;
 	}
-	
+
 }
