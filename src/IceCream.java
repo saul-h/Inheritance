@@ -4,9 +4,30 @@
  */
 
 public class IceCream extends DessertItem {
+	
+	// Cost of ice cream
+	private int cost;
+	// Calories of ice cream
+	private int calories;
+	
+	// Constructor
+	public IceCream() {
+		name = "Ice Cream";
+	}
+	
+	// Return cost of ice cream
 	@Override
 	public double getCost() {
-		// TODO Auto-generated method stub
-		return 0;
+		return cost;
+	}
+	
+	// Set calorie amount
+	public void setCalories(int c) {
+		this.calories = c;
+	}
+	
+	// Return calories
+	public int getCalories() {
+		return this.calories;
 	}
 }
