@@ -57,7 +57,7 @@ public class Checkout {
 	
 	//  Returns a String representing a receipt for the current list of items
 	public String toString() {
-		String title = "M & M Dessert Shoppe\n"+"--------------------\n\n";
+		String title = "A & S Dessert Shoppe\n"+"--------------------\n\n";
 		String body = "";
 		for(DessertItem item: items) {
 			body += String.format("%-20s%9.2f%n",item, item.getCost());

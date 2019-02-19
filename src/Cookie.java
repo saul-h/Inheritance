@@ -6,14 +6,6 @@
 public class Cookie extends DessertItem {
 	
    
-/**
- * Initializes Cookie data
- */
-   public Cookie(int quantity, double price) {
-      super.name = "Cookie";
-      this.quantity = quantity;
-      this.price = price;
-}
 	// Number of cookies
 	private int quantity;
 	// Price per dozen (in cents)
@@ -24,15 +16,23 @@ public class Cookie extends DessertItem {
 	// Constructor
 	public Cookie() {
 		name = "Cookie";
-    quantity = 0;
-    price = 0.0;
+		quantity = 0;
+		pricePerDoz = 0;
+	}
+	
+	public Cookie(int quantity, int price) {
+	      super.name = "Cookie";
+	      this.quantity = quantity;
+	      this.pricePerDoz = price;
 	}
 	
 	// Return cost of cookie
 	@Override
 	public double getCost() {
+		double q = (double)quantity / 12.0f;
+		double p = (double)pricePerDoz;
 		// Multiply by 100 to convert to dollars
-		double c = numberOfCookies/12 * pricePerDoz * 100.0f;
+		double c = (q * p / 100.0f);
 		// Round to nearest cent
 		c = Math.round(c*100.0f);
 		return c/100.0f;	// Return in dollars

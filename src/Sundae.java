@@ -14,9 +14,15 @@ public class Sundae extends IceCream{
 		name = "Sundae";
 	}
 	
+	public Sundae(int c, int t) {
+		name = "Sundae";
+		cost = c;
+		this.costOfTopping = t;
+	}
+	
 	// Return cost of sundae
 	public double getCost() {
-		double c = super.getCost() + costOfTopping * 100;
+		double c = super.getCost() + (double)costOfTopping / 100;
 		// Round to nearest cent
 		c = Math.round(c * 100.0f);
 		return c/100.0f;
