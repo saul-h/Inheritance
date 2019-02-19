@@ -69,7 +69,7 @@ public class Checkout {
 		}
 		body += "\n";
 		String footer = String.format("%-25s%9.2f%n","Tax", totalTax() / 100.0f);
-		footer += String.format("%-25s%9.2f","Total Cost", totalCost() + totalTax()/100);
+		footer += String.format("%-25s%9.2f%n","Total Cost", totalCost() + totalTax()/100);
 		return info+title+body+footer;
 	}
 
