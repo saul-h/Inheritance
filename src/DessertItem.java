@@ -8,6 +8,15 @@ public abstract class DessertItem implements Comparable<DessertItem>{
 
   protected String name;
   protected int calories;
+  
+  public static DessertItem max(DessertItem item, DessertItem item2) {
+	  if(item.compareTo(item2) > 0) {
+		  return item;
+	  }else if(item.compareTo(item2) < 0) {
+		  return item2;
+	  }
+	  return item;
+  }
 
 /**
  * Null constructor for DessertItem class
@@ -40,6 +49,10 @@ public abstract class DessertItem implements Comparable<DessertItem>{
   
   public int getCalories() {
      return calories;
+  }
+  
+  public int compareTo(DessertItem o) {
+	  return calories - o.getCalories();
   }
 
 }
