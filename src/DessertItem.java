@@ -4,7 +4,7 @@
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
-public abstract class DessertItem {
+public abstract class DessertItem implements Comparable<DessertItem>{
 
   protected String name;
   protected int calories;
