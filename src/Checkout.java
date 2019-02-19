@@ -61,11 +61,11 @@ public class Checkout {
 		String title = "A & S Dessert Shoppe\n"+"--------------------\n\n";
 		String body = "";
 		for(DessertItem item: items) {
-			body += String.format("%-20s%9.2f%n",item, item.getCost());
+			body += String.format("%-25s%9.2f%n",item, item.getCost());
 		}
 		body += "\n";
-		String footer = String.format("%-20s%9.2f%n","Tax", totalTax() / 100.0f);
-		footer += String.format("%-20s%9.2f","Total Cost", totalCost() + totalTax()/100.0f);
+		String footer = String.format("%-25s%9.2f%n","Tax", totalTax() / 100.0f);
+		footer += String.format("%-25s%9.2f","Total Cost", totalCost() + totalTax()/100.0f);
 		return title+body+footer;
 	}
 
