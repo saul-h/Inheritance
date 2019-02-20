@@ -6,25 +6,28 @@
 
 public class Cookie extends DessertItem {
 	
-   
 	// Number of cookies
 	private int quantity;
 	// Price per dozen (in cents)
 	private int pricePerDoz;
 	
-	// Constructor
+/**
+ * Default constructor for Cookie class.
+ */
 	public Cookie() {
-		name = "Cookie";
+		name = "";
 		quantity = 0;
 		pricePerDoz = 0;
 	}
-	
-	public Cookie(int quantity, int price) {
-	      super.name = "Cookie";
-	      this.quantity = quantity;
-	      this.pricePerDoz = price;
-	}
    
+/**
+ * Constructs an instance of the Cookie class with the specified name, quantity,
+ * price, and calories.
+ * @param name Name/type of cookie
+ * @param quantity Quantity of cookies
+ * @param price Price (in cents) per dozen
+ * @param calories Amount of calories
+ */
    public Cookie(String name, int quantity, int price, int calories) {
       super.name = name + "(Cookie)";
       this.quantity = quantity;
@@ -32,7 +35,10 @@ public class Cookie extends DessertItem {
       super.calories = calories;
    }
 	
-	// Return cost of cookie
+/**
+ * Returns the cost of this Cookie(s)
+ * @return The cost of Cookie(s) in dollars and cents
+ */
 	@Override
 	public double getCost() {
 		double q = (double)quantity / 12.0f;
@@ -43,15 +49,16 @@ public class Cookie extends DessertItem {
 		c = Math.round(c*100.0f);
 		return c/100.0f;	// Return in dollars
 	}
-	
-	// Set calorie amount
-	public void setCalories(int c) {
-		this.calories = c;
-	}
-	
-	// Return calories
-	public int getCalories() {
-		return this.calories;
-	}
-
+   
+/**
+ * 
+ *  
+ */
+   @Override
+   public String toString() {
+      String lineItem = "";
+      lineItem += this.quantity + String.format(" @ %.2f /dz.%n", ((double)this.pricePerDoz / 100.0));
+      lineItem += String.format("%-25s%9.2f%n", super.name, this.getCost());
+      return lineItem;
+   }
 }
