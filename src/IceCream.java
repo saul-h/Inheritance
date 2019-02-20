@@ -21,7 +21,7 @@ public class IceCream extends DessertItem {
    
    public IceCream(String name, int cost, int calories)
    {
-      super.name = this.name + "(IceCream)";
+      super.name = name + "(IceCream)";
       this.cost = cost;
       super.calories = calories;
    }

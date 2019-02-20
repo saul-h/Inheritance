@@ -11,8 +11,6 @@ public class Cookie extends DessertItem {
 	private int quantity;
 	// Price per dozen (in cents)
 	private int pricePerDoz;
-	// Calories of cookie
-	private int calories;
 	
 	// Constructor
 	public Cookie() {
@@ -30,7 +28,7 @@ public class Cookie extends DessertItem {
    public Cookie(String name, int quantity, int price, int calories) {
       super.name = name + "(Cookie)";
       this.quantity = quantity;
-      this.price = price;
+      this.pricePerDoz = price;
       super.calories = calories;
    }
 	
@@ -55,4 +53,5 @@ public class Cookie extends DessertItem {
 	public int getCalories() {
 		return this.calories;
 	}
+
 }
