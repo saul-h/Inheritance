@@ -1,46 +1,61 @@
-/*
- * Abel Acosta
- * Saul Hernandez
+/**
+ * @author Abel Acosta
+ * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
-public class Sundae extends IceCream{
-	// Cost of ice cream topping
+public class Sundae extends IceCream {
+
+   // Cost of ice cream topping
 	private int costOfTopping;
-	
-	// Constructor
+   // Name of topping Sundae comes with
+	private String topping;
+/**
+ * Default constructor for Sundae class.
+ */
 	public Sundae() {
-		name = "Sundae";
+		super.name = "";
+      this.costOfTopping = 0;
+      this.topping = "";
 	}
-	
-	public Sundae(int c, int t) {
-		name = "Sundae";
-		cost = c;
-		this.costOfTopping = t;
-	}
-   
-   public Sundae(String name, int c, int t, int calories) {
+
+/**
+ * Constructs a Sundae item with the specified name of Sundae, type of topping,
+ * cost of IceCream, cost of topping and the amount of calories.
+ * @param name Name/flavor of Sundae
+ * @param topping Topping on Sundae
+ * @param cost Cost of Ice Cream in cents
+ * @param costOfTopping Cost of toppings in cents
+ * @param calories Total amount of Calories in Sundae
+ */
+   public Sundae(String name, String topping, int cost, int costOfTopping, int calories) {
       super.name = name + "(Sundae)";
-      this.cost = c;
-      this.costOfTopping = t;
+      this.topping = topping + "(Topping)";
+      this.cost = cost;
+      this.costOfTopping = costOfTopping;
       super.calories = calories;
    }
 	
-	// Return cost of sundae
+/**
+ * Returns the cost of this Sundae item
+ * @return Cost of this Sundae in dollar and cents
+ */
 	public double getCost() {
 		double c = super.getCost() + (double)costOfTopping / 100;
 		// Round to nearest cent
 		c = Math.round(c * 100.0f);
 		return c/100.0f;
 	}
-	
-	// Set calorie amount
-	public void setCalories(int c) {
-		this.calories = c;
-	}
-	
-	// Return calories
-	public int getCalories() {
-		return this.calories;
-	}
+/**
+ * Return a string that is formatted for a receipt
+ * @return String with Sundae name, topping and price formatted for receipt
+ */
+   @Override
+   public String toString() {
+      String lineItem = "";
+      lineItem += super.name + " with \n";
+      lineItem += String.format("%-25s%9.2f%n", this.topping, this.getCost());
+      return lineItem;
+   }
 }
