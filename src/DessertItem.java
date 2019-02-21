@@ -4,6 +4,12 @@
  * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
+ 
+/**
+ * This is the DessertItem class. It serves as the parent class
+ * to the IceCream, Cookie, Sundae, and Candy classes. It has
+ * name and calories attribute
+ */
 public abstract class DessertItem implements Comparable<DessertItem> {
 
    //all dessert items have a name
@@ -25,7 +31,7 @@ public abstract class DessertItem implements Comparable<DessertItem> {
       } else if (item1.compareTo(item2) < 0) {
          return item2;
       }
-      return item1; //item and item2 are equal in calories
+      return item1; //item1 and item2 are equal in calories
    }
   
    /**

@@ -4,6 +4,11 @@
  * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
+ 
+ /**
+  * This is the IceCream class which extends from the DessertItem class
+  * Along with the DessertItem attributes this class has a cost attribute
+  */
 public class IceCream extends DessertItem {
 	
 	// Cost of ice cream (in cents)

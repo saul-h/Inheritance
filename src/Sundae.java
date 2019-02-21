@@ -5,6 +5,12 @@
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
+
+/**
+ * This is the Sundae class.
+ * Along with the DessertItem and Ice Cream attributes this class has a cost
+ * of topping and topping type
+ */
 public class Sundae extends IceCream {
 
    // Cost of ice cream topping

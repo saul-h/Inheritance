@@ -5,6 +5,12 @@
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
+
+/**
+ * This is the Cookie class which extends from the DessertItem class.
+ * Along with the DessertItem attributes this class has a quantity and
+ * price per dozen attribute
+ */
 public class Cookie extends DessertItem {
 	
 	// Number of cookies
