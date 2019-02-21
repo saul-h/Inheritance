@@ -1,6 +1,7 @@
-/*
- * Abel Acosta
- * Saul Hernandez
+/**
+ * @author Abel Acosta
+ * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -51,8 +52,8 @@ public class Cookie extends DessertItem {
 	}
    
 /**
- * 
- *  
+ * Return a string describing this Cookie class that is formatted for a receipt
+ * @return String with Cookie name, quantity and price/dozen formatted for receipt
  */
    @Override
    public String toString() {

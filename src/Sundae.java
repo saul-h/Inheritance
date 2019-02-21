@@ -1,6 +1,7 @@
-/*
- * Abel Acosta
- * Saul Hernandez
+/**
+ * @author Abel Acosta
+ * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -47,7 +48,7 @@ public class Sundae extends IceCream {
 		return c/100.0f;
 	}
 /**
- * Return a string formatted for a receipt
+ * Return a string that is formatted for a receipt
  * @return String with Sundae name, topping and price formatted for receipt
  */
    @Override

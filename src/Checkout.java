@@ -1,10 +1,11 @@
-import java.util.ArrayList;
-
-/*
- * Abel Acosta
- * Saul Hernandez
+/**
+ * @author Abel Acosta
+ * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
+
+import java.util.ArrayList;
 
 public class Checkout {
 	
@@ -94,16 +95,19 @@ public class Checkout {
     * @return a String representing a receipt for the current list of items
     */
 	public String toString() {
+      //display # of items on receipt as well as subtotal, tax and total
 		String info = 	"Number of items: " + items.size() + "\n" +
 						String.format("Total Cost: %.2f%n", totalCost()) +
 						"Total Tax: " + (double)totalTax()/100.0 + "\n" + 
 						String.format("Cost + Tax: %.2f%n%n", (totalCost() + (totalTax() / 100.0)));
 		String title = "A & S Dessert Shoppe\n"+"--------------------\n";
 		String body = "";
-		for(DessertItem item: items) {
+		//add items onto receipt
+      for(DessertItem item: items) {
 			body += item.toString();
          body += "\n";
 		}
+      //display Subtotal, tax and total
       String footer = String.format("%-25s%9.2f%n", "Subtotal", totalCost());
 		footer += String.format("%-25s%9.2f%n","Tax", totalTax() / 100.0f);
 		footer += String.format("%-25s%9.2f%n","Total Cost", totalCost() + totalTax()/100.0f);

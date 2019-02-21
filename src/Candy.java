@@ -1,6 +1,7 @@
-/*
+/**
  * @author Abel Acosta
  * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
@@ -49,6 +50,10 @@ public class Candy extends DessertItem{
 		return c/100.0f;	// Return in dollars
 	}
    
+/**
+ * Return a string describing this Candy class that is formatted for a receipt
+ * @return String with Sundae name, topping and price formatted for receipt
+ */
    public String toString()
    {
       String lineItem = "";

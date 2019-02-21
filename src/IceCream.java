@@ -1,6 +1,7 @@
 /**
  * @author Abel Acosta
  * @author Saul Hernandez
+ * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 public class IceCream extends DessertItem {
@@ -42,7 +43,7 @@ public class IceCream extends DessertItem {
 	}
    
 /**
- * Returns a string formatted for a receipt. 
+ * Returns a string describing this IceCream class formatted for a receipt. 
  * @return A string with the flavor/type of IceCream and the price
  */
    @Override
