@@ -78,7 +78,7 @@ public class Checkout {
 	
    /**
     * Sets the tax rate
-    * @param tax rate (as a decimal for example 9% would be 0.09)
+    * @param t (as a decimal for example 9% would be 0.09)
     */
 	public void setTaxRate(double t) {
 		tax = t;

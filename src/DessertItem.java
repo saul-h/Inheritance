@@ -55,6 +55,7 @@ public abstract class DessertItem implements Comparable<DessertItem> {
 
    /**
     * Initializes DessertItem data
+    * @param name Name of Dessert Item
     */
    public DessertItem(String name) {
       this.name = name;
