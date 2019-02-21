@@ -4,7 +4,6 @@
  * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
-
 public abstract class DessertItem implements Comparable<DessertItem> {
 
    //all dessert items have a name

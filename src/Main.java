@@ -115,6 +115,6 @@ public class Main {
    }
    
    private void printComparisons(DessertItem a, DessertItem b) {
-      
+      //TODO make max() method work and compare a and b to see which has the higher calories
    }
 }
