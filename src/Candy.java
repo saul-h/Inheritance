@@ -5,6 +5,12 @@
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
 
+
+/**
+ * This is the Candy class which is a child class of the DessertItem class
+ * Along with the DessertItem attributes this class has a weight and
+ * price per pound attribute
+ */
 public class Candy extends DessertItem{
 	
 	// Weight of the candy (lbs)

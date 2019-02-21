@@ -4,9 +4,13 @@
  * Feb 21 2019
  * Purpose: This program demonstrates the use of inheritance, polymorphism, and interfaces.
  */
-
+ 
 import java.util.ArrayList;
 
+/**
+ * The Checkout class consists of an ArrayList of DessertItems being purchased
+ * and a tax rate.
+ */
 public class Checkout {
 	
    //used to store checked out items
